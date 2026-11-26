@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cryptocurrency prices — ChainMarket</title>
+  <meta name="description" content="Live prices for the 20 largest cryptocurrencies: price, 24h change, market cap, volume and a seven-day trend.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <!-- CoAd publisher tag: replace every placeholder before deploying. -->
+  <script async src="__AD_SCRIPT_URL__" co-pub="__PUB_CODE__" co-st="__SITE_CODE_MARKET__"
+          crossorigin="anonymous" co-auto-placement="true" co-auto-init="true"></script>
+  <script async src="__SITE_SCRIPT_URL__" co-pub="__PUB_CODE__" co-st="__SITE_CODE_MARKET__"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <span class="topbar__status"><span class="status-dot" aria-hidden="true"></span> Markets open</span>
+        <div class="topbar__right">
+          <span>Global market cap <strong class="mono">$2.41T</strong></span>
+          <span>24h volume <strong class="mono">$98.4B</strong></span>
+          <span>Updated 18:42 UTC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container masthead">
+      <a class="brand" href="index.html" aria-label="ChainMarket — home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12v9M12 12l8-4.5M12 12 4 7.5"/></svg>
+        </span>
+        <span class="brand__name">Chain<span>Market</span></span>
+      </a>
+      <div class="masthead__tools">
+        <button class="icon-btn" type="button" aria-label="Search ChainMarket">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <a class="btn btn--ghost" href="coin.html">Sign in</a>
+        <a class="btn btn--gold" href="coin.html">Get started</a>
+      </div>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <div class="container site-nav__inner">
+        <a href="index.html">Home</a>
+        <a href="index.html">Market Overview</a>
+        <a href="coin.html" data-link-disabled>Stocks &amp; Investment</a>
+        <a class="is-active" href="crypto.html" aria-current="page">Cryptocurrency</a>
+        <a href="coin.html" data-link-disabled>Blockchain</a>
+        <a href="index.html#news" data-link-disabled>News</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="ticker" aria-label="Crypto price ticker">
+    <div class="container ticker__inner">
+      <span class="ticker__label">Markets</span>
+      <div class="ticker__viewport">
+        <div class="ticker__track" data-ticker-track>
+          <a class="ticker__item" href="coin.html" data-link-enabled><em>BTC</em><span class="ticker__price">$67,482.10</span><span class="ticker__change is-up">+2.41%</span></a>
+          <a class="ticker__item" href="coin.html"><em>ETH</em><span class="ticker__price">$3,284.55</span><span class="ticker__change is-up">+1.12%</span></a>
+          <a class="ticker__item" href="crypto.html"><em>SOL</em><span class="ticker__price">$172.44</span><span class="ticker__change is-down">−0.84%</span></a>
+          <a class="ticker__item" href="crypto.html"><em>BNB</em><span class="ticker__price">$598.20</span><span class="ticker__change is-up">+0.62%</span></a>
+          <a class="ticker__item" href="crypto.html"><em>XRP</em><span class="ticker__price">$0.6421</span><span class="ticker__change is-down">−1.03%</span></a>
+          <a class="ticker__item" href="crypto.html"><em>ADA</em><span class="ticker__price">$0.4892</span><span class="ticker__change is-up">+0.37%</span></a>
+          <a class="ticker__item" href="crypto.html"><em>AVAX</em><span class="ticker__price">$41.88</span><span class="ticker__change is-up">+2.02%</span></a>
+          <a class="ticker__item" href="crypto.html"><em>DOGE</em><span class="ticker__price">$0.1584</span><span class="ticker__change is-down">−0.45%</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Cryptocurrency prices</span>
+      </nav>
+
+      <div class="page-head">
+        <span class="kicker">20 assets · USD</span>
+        <h1>Cryptocurrency prices</h1>
+        <p>Price, 24-hour change, market cap and volume. Sparklines show a simulated seven-day trend.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Filter coins by category">
+        <button class="tab" type="button" role="tab" aria-selected="true" tabindex="0" data-cat-tab="all">All</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-cat-tab="layer1">Layer 1</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-cat-tab="defi">DeFi</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-cat-tab="stable">Stablecoins</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-cat-tab="meme">Meme</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <h2>Market table</h2>
+          <span class="updated">Last updated 18:42 UTC</span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <caption class="visually-hidden">Cryptocurrency prices, 24-hour change, seven-day trend, market cap and volume</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Asset</th>
+                <th scope="col" class="num">Price</th>
+                <th scope="col" class="num">24h</th>
+                <th scope="col" class="hide-sm">7d</th>
+                <th scope="col" class="num hide-sm">Market cap</th>
+                <th scope="col" class="num hide-sm">Volume</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">1</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--btc" aria-hidden="true">BTC</span>
+                      <span><span class="coin__name">Bitcoin</span><span class="coin__symbol">BTC</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$67,482.10</td>
+                  <td class="num is-up">+2.41%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,26.0 4.9,23.2 8.8,23.6 12.7,21.1 16.7,18.4 20.6,18.9 24.5,18.9 28.4,18.6 32.3,16.3 36.2,13.4 40.1,10.9 44.0,10.0 48.0,7.4 51.9,7.1 55.8,7.8 59.7,8.8 63.6,7.5 67.5,7.6 71.4,6.3 75.3,6.2 79.3,5.0 83.2,3.0 87.1,3.6 91.0,3.4" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$1.33T</td>
+                  <td class="num hide-sm">$38.2B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">2</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--eth" aria-hidden="true">ETH</span>
+                      <span><span class="coin__name">Ethereum</span><span class="coin__symbol">ETH</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$3,284.55</td>
+                  <td class="num is-up">+1.12%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,25.5 4.9,26.0 8.8,24.5 12.7,23.8 16.7,21.6 20.6,22.3 24.5,20.5 28.4,18.6 32.3,18.2 36.2,16.7 40.1,14.4 44.0,12.7 48.0,12.2 51.9,11.0 55.8,11.3 59.7,10.5 63.6,10.8 67.5,10.3 71.4,8.3 75.3,6.7 79.3,4.5 83.2,5.2 87.1,3.0 91.0,3.6" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$394.8B</td>
+                  <td class="num hide-sm">$18.4B</td>
+                </tr>
+                <tr data-coin-cat="stable">
+                  <td class="rank-num">3</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--usdt" aria-hidden="true">USDT</span>
+                      <span><span class="coin__name">Tether</span><span class="coin__symbol">USDT</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$1.00</td>
+                  <td class="num is-up">+0.01%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,26.0 4.9,23.1 8.8,22.2 12.7,17.7 16.7,21.5 20.6,17.1 24.5,14.0 28.4,13.4 32.3,11.6 36.2,8.7 40.1,11.2 44.0,12.1 48.0,10.4 51.9,10.5 55.8,8.0 59.7,7.9 63.6,4.6 67.5,7.1 71.4,10.3 75.3,12.3 79.3,8.9 83.2,4.7 87.1,3.0 91.0,6.1" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$112.4B</td>
+                  <td class="num hide-sm">$52.1B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">4</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--bnb" aria-hidden="true">BNB</span>
+                      <span><span class="coin__name">BNB</span><span class="coin__symbol">BNB</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$598.20</td>
+                  <td class="num is-up">+0.62%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,23.1 4.9,23.9 8.8,25.2 12.7,26.0 16.7,22.7 20.6,18.7 24.5,19.6 28.4,15.9 32.3,12.5 36.2,12.0 40.1,12.8 44.0,13.7 48.0,14.6 51.9,15.0 55.8,13.1 59.7,14.3 63.6,10.8 67.5,10.7 71.4,10.7 75.3,8.1 79.3,9.3 83.2,7.2 87.1,3.0 91.0,4.3" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$88.6B</td>
+                  <td class="num hide-sm">$1.9B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">5</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--sol" aria-hidden="true">SOL</span>
+                      <span><span class="coin__name">Solana</span><span class="coin__symbol">SOL</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$172.44</td>
+                  <td class="num is-down">−0.84%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,3.7 4.9,3.0 8.8,4.3 12.7,3.6 16.7,7.9 20.6,8.4 24.5,7.8 28.4,6.8 32.3,9.5 36.2,9.9 40.1,11.7 44.0,15.5 48.0,14.8 51.9,15.7 55.8,16.9 59.7,19.8 63.6,20.4 67.5,22.9 71.4,26.0 75.3,24.5 79.3,23.3 83.2,24.5 87.1,23.6 91.0,22.4" fill="none" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$79.8B</td>
+                  <td class="num hide-sm">$4.8B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">6</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--xrp" aria-hidden="true">XRP</span>
+                      <span><span class="coin__name">XRP</span><span class="coin__symbol">XRP</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$0.6421</td>
+                  <td class="num is-down">−1.03%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,3.0 4.9,5.7 8.8,5.8 12.7,7.0 16.7,9.3 20.6,11.1 24.5,11.3 28.4,11.8 32.3,12.4 36.2,15.3 40.1,15.3 44.0,17.7 48.0,20.1 51.9,19.8 55.8,21.4 59.7,22.6 63.6,22.1 67.5,24.0 71.4,24.8 75.3,23.9 79.3,23.2 83.2,25.9 87.1,26.0 91.0,25.7" fill="none" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$35.7B</td>
+                  <td class="num hide-sm">$2.3B</td>
+                </tr>
+                <tr data-coin-cat="stable">
+                  <td class="rank-num">7</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon" aria-hidden="true">USDC</span>
+                      <span><span class="coin__name">USD Coin</span><span class="coin__symbol">USDC</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$0.9998</td>
+                  <td class="num is-down">−0.02%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,9.3 4.9,15.3 8.8,14.8 12.7,10.0 16.7,11.5 20.6,13.0 24.5,10.4 28.4,8.7 32.3,10.7 36.2,9.5 40.1,8.2 44.0,8.4 48.0,3.0 51.9,7.4 55.8,12.0 59.7,17.5 63.6,12.0 67.5,15.0 71.4,21.1 75.3,17.5 79.3,21.2 83.2,26.0 87.1,23.6 91.0,25.5" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$33.1B</td>
+                  <td class="num hide-sm">$9.4B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">8</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--ada" aria-hidden="true">ADA</span>
+                      <span><span class="coin__name">Cardano</span><span class="coin__symbol">ADA</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$0.4892</td>
+                  <td class="num is-up">+0.37%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,26.0 4.9,24.9 8.8,25.7 12.7,25.0 16.7,22.5 20.6,22.2 24.5,20.7 28.4,20.1 32.3,17.9 36.2,17.2 40.1,16.7 44.0,14.8 48.0,12.6 51.9,11.2 55.8,10.4 59.7,7.5 63.6,7.8 67.5,7.6 71.4,7.5 75.3,7.5 79.3,5.1 83.2,4.0 87.1,4.1 91.0,3.0" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$17.4B</td>
+                  <td class="num hide-sm">$1.1B</td>
+                </tr>
+                <tr data-coin-cat="meme">
+                  <td class="rank-num">9</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--doge" aria-hidden="true">DOGE</span>
+                      <span><span class="coin__name">Dogecoin</span><span class="coin__symbol">DOGE</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$0.1584</td>
+                  <td class="num is-down">−0.45%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,3.0 4.9,4.3 8.8,4.1 12.7,6.4 16.7,7.4 20.6,7.6 24.5,8.0 28.4,8.2 32.3,8.8 36.2,11.5 40.1,13.9 44.0,15.6 48.0,15.4 51.9,16.7 55.8,16.8 59.7,19.1 63.6,21.1 67.5,21.3 71.4,21.2 75.3,20.4 79.3,22.3 83.2,24.5 87.1,23.9 91.0,26.0" fill="none" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$22.8B</td>
+                  <td class="num hide-sm">$2.9B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">10</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--avax" aria-hidden="true">AVAX</span>
+                      <span><span class="coin__name">Avalanche</span><span class="coin__symbol">AVAX</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$41.88</td>
+                  <td class="num is-up">+2.02%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,25.0 4.9,25.5 8.8,26.0 12.7,24.4 16.7,23.4 20.6,23.3 24.5,21.7 28.4,19.9 32.3,20.5 36.2,20.2 40.1,18.1 44.0,17.6 48.0,17.3 51.9,17.7 55.8,15.9 59.7,14.8 63.6,13.0 67.5,11.6 71.4,9.8 75.3,9.6 79.3,8.3 83.2,6.7 87.1,5.0 91.0,3.0" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$16.2B</td>
+                  <td class="num hide-sm">$0.9B</td>
+                </tr>
+                <tr class="ad-row">
+                  <td colspan="7" class="ad-cell">
+                    <div class="ad-wrap ad-wrap--center">
+                      <span class="ad-label">Advertisement</span>
+                      <ins class="cox-ad-unit" data-cox-unit="__UNIT_MARKET_CRYPTO_TABLE__" style="display:block;width:100%"></ins>
+                    </div>
+                  </td>
+                </tr>
+                <tr data-coin-cat="defi">
+                  <td class="rank-num">11</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--link" aria-hidden="true">LINK</span>
+                      <span><span class="coin__name">Chainlink</span><span class="coin__symbol">LINK</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$18.42</td>
+                  <td class="num is-up">+1.84%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,25.8 4.9,25.4 8.8,26.0 12.7,24.7 16.7,23.4 20.6,22.7 24.5,22.7 28.4,21.3 32.3,19.3 36.2,18.3 40.1,16.2 44.0,14.1 48.0,11.9 51.9,12.0 55.8,11.8 59.7,11.5 63.6,10.2 67.5,8.7 71.4,8.0 75.3,8.5 79.3,8.4 83.2,6.2 87.1,4.0 91.0,3.0" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$11.2B</td>
+                  <td class="num hide-sm">$0.8B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">12</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--dot" aria-hidden="true">DOT</span>
+                      <span><span class="coin__name">Polkadot</span><span class="coin__symbol">DOT</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$7.21</td>
+                  <td class="num is-down">−0.62%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,3.9 4.9,3.9 8.8,3.0 12.7,3.1 16.7,4.7 20.6,6.1 24.5,10.2 28.4,12.9 32.3,11.7 36.2,11.3 40.1,12.2 44.0,11.0 48.0,12.4 51.9,11.7 55.8,10.9 59.7,14.0 63.6,16.1 67.5,17.5 71.4,20.8 75.3,24.0 79.3,26.0 83.2,24.9 87.1,26.0 91.0,25.6" fill="none" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$10.1B</td>
+                  <td class="num hide-sm">$0.4B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">13</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--matic" aria-hidden="true">MATIC</span>
+                      <span><span class="coin__name">Polygon</span><span class="coin__symbol">MATIC</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$0.7284</td>
+                  <td class="num is-up">+1.21%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,25.7 4.9,26.0 8.8,24.6 12.7,23.9 16.7,22.2 20.6,21.4 24.5,22.0 28.4,20.4 32.3,19.3 36.2,17.2 40.1,16.2 44.0,14.0 48.0,13.6 51.9,13.3 55.8,11.5 59.7,9.3 63.6,8.2 67.5,6.9 71.4,6.7 75.3,4.4 79.3,4.2 83.2,3.0 87.1,3.5 91.0,3.6" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$7.2B</td>
+                  <td class="num hide-sm">$0.5B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">14</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--ltc" aria-hidden="true">LTC</span>
+                      <span><span class="coin__name">Litecoin</span><span class="coin__symbol">LTC</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$84.20</td>
+                  <td class="num is-down">−4.90%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,4.2 4.9,3.2 8.8,3.6 12.7,3.0 16.7,6.5 20.6,9.8 24.5,8.8 28.4,10.0 32.3,11.5 36.2,10.6 40.1,13.1 44.0,13.5 48.0,13.1 51.9,15.1 55.8,16.5 59.7,17.3 63.6,18.9 67.5,21.3 71.4,20.2 75.3,22.3 79.3,22.2 83.2,21.7 87.1,22.6 91.0,26.0" fill="none" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$6.3B</td>
+                  <td class="num hide-sm">$0.6B</td>
+                </tr>
+                <tr data-coin-cat="defi">
+                  <td class="rank-num">15</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--uni" aria-hidden="true">UNI</span>
+                      <span><span class="coin__name">Uniswap</span><span class="coin__symbol">UNI</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$9.84</td>
+                  <td class="num is-up">+3.12%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,26.0 4.9,24.5 8.8,22.6 12.7,20.1 16.7,21.0 20.6,21.5 24.5,18.8 28.4,19.0 32.3,18.3 36.2,16.5 40.1,16.5 44.0,14.1 48.0,12.1 51.9,9.0 55.8,8.9 59.7,7.3 63.6,5.0 67.5,3.7 71.4,4.0 75.3,3.6 79.3,3.1 83.2,3.0 87.1,3.7 91.0,4.0" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$5.9B</td>
+                  <td class="num hide-sm">$0.3B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">16</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--atom" aria-hidden="true">ATOM</span>
+                      <span><span class="coin__name">Cosmos</span><span class="coin__symbol">ATOM</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$8.12</td>
+                  <td class="num is-down">−3.70%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,3.0 4.9,5.5 8.8,8.7 12.7,11.4 16.7,10.6 20.6,11.1 24.5,11.6 28.4,11.8 32.3,14.3 36.2,15.3 40.1,15.3 44.0,15.4 48.0,14.7 51.9,17.8 55.8,17.6 59.7,17.5 63.6,16.8 67.5,19.3 71.4,20.2 75.3,21.6 79.3,22.2 83.2,24.0 87.1,23.0 91.0,26.0" fill="none" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$3.2B</td>
+                  <td class="num hide-sm">$0.2B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">17</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--xlm" aria-hidden="true">XLM</span>
+                      <span><span class="coin__name">Stellar</span><span class="coin__symbol">XLM</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$0.1124</td>
+                  <td class="num is-down">−4.20%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,3.0 4.9,4.4 8.8,3.8 12.7,4.1 16.7,6.5 20.6,5.8 24.5,7.6 28.4,7.2 32.3,8.7 36.2,8.3 40.1,9.0 44.0,10.7 48.0,12.1 51.9,13.8 55.8,14.9 59.7,16.2 63.6,18.2 67.5,20.7 71.4,20.7 75.3,22.9 79.3,25.2 83.2,24.7 87.1,24.9 91.0,26.0" fill="none" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$3.1B</td>
+                  <td class="num hide-sm">$0.1B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">18</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--near" aria-hidden="true">NEAR</span>
+                      <span><span class="coin__name">NEAR Protocol</span><span class="coin__symbol">NEAR</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$6.04</td>
+                  <td class="num is-up">+7.60%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,26.0 4.9,23.8 8.8,22.7 12.7,20.5 16.7,20.2 20.6,19.3 24.5,19.3 28.4,19.0 32.3,17.5 36.2,17.5 40.1,17.1 44.0,16.8 48.0,14.8 51.9,12.9 55.8,11.4 59.7,10.0 63.6,8.8 67.5,9.5 71.4,9.6 75.3,8.5 79.3,7.1 83.2,5.2 87.1,3.9 91.0,3.0" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$6.7B</td>
+                  <td class="num hide-sm">$0.7B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">19</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--apt" aria-hidden="true">APT</span>
+                      <span><span class="coin__name">Aptos</span><span class="coin__symbol">APT</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$12.86</td>
+                  <td class="num is-up">+11.80%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,26.0 4.9,23.6 8.8,21.6 12.7,19.8 16.7,20.3 20.6,21.7 24.5,21.0 28.4,21.4 32.3,20.0 36.2,21.0 40.1,22.2 44.0,21.1 48.0,19.1 51.9,19.7 55.8,15.9 59.7,16.3 63.6,14.1 67.5,12.9 71.4,12.9 75.3,12.5 79.3,11.9 83.2,8.9 87.1,6.7 91.0,3.0" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$5.4B</td>
+                  <td class="num hide-sm">$0.6B</td>
+                </tr>
+                <tr data-coin-cat="layer1">
+                  <td class="rank-num">20</td>
+                  <td>
+                    <span class="coin">
+                      <span class="coin__icon coin__icon--arb" aria-hidden="true">ARB</span>
+                      <span><span class="coin__name">Arbitrum</span><span class="coin__symbol">ARB</span></span>
+                    </span>
+                  </td>
+                  <td class="num" data-cell="price">$1.42</td>
+                  <td class="num is-up">+9.40%</td>
+                  <td class="hide-sm"><svg class="spark" viewBox="0 0 92 28" aria-hidden="true"><polyline points="1.0,25.4 4.9,26.0 8.8,24.9 12.7,25.6 16.7,22.5 20.6,20.8 24.5,20.2 28.4,20.3 32.3,17.5 36.2,15.4 40.1,14.9 44.0,15.9 48.0,16.9 51.9,14.6 55.8,12.1 59.7,12.1 63.6,12.1 67.5,10.8 71.4,10.0 75.3,6.7 79.3,7.2 83.2,6.1 87.1,5.9 91.0,3.0" fill="none" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round"/></svg></td>
+                  <td class="num hide-sm">$4.1B</td>
+                  <td class="num hide-sm">$0.8B</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="meta" style="padding-top:14px;">Prices are simulated sample data for advertising demonstrations. They are not investment advice.</p>
+
+      <section class="terminal-grid terminal-grid--table" aria-label="Sector performance and market dominance">
+        <div class="panel">
+          <div class="panel__head">
+            <h2>Sector performance</h2>
+            <span>24h</span>
+          </div>
+          <div class="sector-row"><span>Layer 1</span><span class="sector-bar"><i style="width:62%"></i></span><span class="num is-up">+3.10%</span></div>
+          <div class="sector-row"><span>DeFi</span><span class="sector-bar"><i style="width:48%"></i></span><span class="num is-up">+2.40%</span></div>
+          <div class="sector-row"><span>AI &amp; data</span><span class="sector-bar"><i style="width:86%"></i></span><span class="num is-up">+5.20%</span></div>
+          <div class="sector-row"><span>Stablecoins</span><span class="sector-bar"><i style="width:4%"></i></span><span class="num is-up">+0.02%</span></div>
+          <div class="sector-row"><span>Meme</span><span class="sector-bar sector-bar--down"><i style="width:30%"></i></span><span class="num is-down">−1.80%</span></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__head">
+            <h2>Market dominance</h2>
+            <span>Share of cap</span>
+          </div>
+          <div class="sector-row"><span>Bitcoin</span><span class="sector-bar"><i style="width:52%"></i></span><span class="num">52.4%</span></div>
+          <div class="sector-row"><span>Ethereum</span><span class="sector-bar"><i style="width:18%"></i></span><span class="num">18.1%</span></div>
+          <div class="sector-row"><span>Stablecoins</span><span class="sector-bar"><i style="width:12%"></i></span><span class="num">12.2%</span></div>
+          <div class="sector-row"><span>Others</span><span class="sector-bar"><i style="width:17%"></i></span><span class="num">17.3%</span></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="market-news-title">
+        <div class="section-head">
+          <h2 id="market-news-title">Market news</h2>
+          <a href="coin.html">All analysis</a>
+        </div>
+        <div class="grid grid--2">
+          <article class="card">
+            <div class="card__media"><img src="assets/img/market-skyline-night.jpg" alt="Financial district at night" width="1600" height="900" loading="lazy"></div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="coin.html">Stablecoin rules: what changes for exchanges</a></h3>
+              <p class="card__excerpt">Reserve disclosure, redemption rights and the new licensing window, explained.</p>
+              <p class="meta"><span>Policy</span><span class="meta__dot">5 min read</span></p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media"><img src="assets/img/market-btc-stack.jpg" alt="Stacks of bitcoin coins" width="1600" height="900" loading="lazy"></div>
+            <div class="card__body">
+              <h3 class="card__title"><a href="coin.html">The ETF flow map: where the money went</a></h3>
+              <p class="card__excerpt">Four weeks of creations and redemptions, broken down by issuer and region.</p>
+              <p class="meta"><span>Research</span><span class="meta__dot">7 min read</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="learn-title">
+        <div class="section-head">
+          <h2 id="learn-title">Before you trade</h2>
+          <a href="coin.html">Read the guides</a>
+        </div>
+        <div class="grid grid--2">
+          <article class="card">
+            <div class="card__body">
+              <h3 class="card__title"><a href="coin.html">What moves a coin in 24 hours?</a></h3>
+              <p class="card__excerpt">Liquidity, funding rates and headline risk — a short guide to the three numbers professional traders watch first.</p>
+              <p class="meta"><span>Explainer</span><span class="meta__dot">5 min read</span></p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__body">
+              <h3 class="card__title"><a href="coin.html">Market cap is not the whole story</a></h3>
+              <p class="card__excerpt">Why circulating supply, unlocks and volume can matter more than the headline ranking.</p>
+              <p class="meta"><span>Analysis</span><span class="meta__dot">7 min read</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <h2>ChainMarket</h2>
+        <p>Market data and independent analysis for people who read the footnotes. Fictional demo publication.</p>
+      </div>
+      <div>
+        <h3>Markets</h3>
+        <ul>
+          <li><a href="crypto.html">Crypto prices</a></li>
+          <li><a href="coin.html">Bitcoin</a></li>
+          <li><a href="coin.html">Ethereum</a></li>
+          <li><a href="index.html">Top movers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Research</h3>
+        <ul>
+          <li><a href="coin.html">Analysis</a></li>
+          <li><a href="coin.html">On-chain data</a></li>
+          <li><a href="coin.html">Regulation</a></li>
+          <li><a href="coin.html">Mining</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="coin.html">About</a></li>
+          <li><a href="coin.html">Careers</a></li>
+          <li><a href="coin.html">Advertise</a></li>
+          <li><a href="coin.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      <span>© 2026 ChainMarket. Simulated prices for advertising demonstrations.</span>
+      <span>Terms · Editorial standards · Accessibility</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
